@@ -1,0 +1,113 @@
+@import 'utils.scss';
+
+.album-page-content {
+  a {
+    font-family: $primary_font;
+  }
+
+  .album-header {
+    margin: 8rem 0 0 2rem;
+    display: flex;
+    align-items: center;
+
+    .album-img {
+      width: 13rem;
+      border-radius: 12px;
+    }
+
+    .contrib-img {
+      border-radius: 50%;
+    }
+
+    .title {
+      margin-left: 1rem;
+
+      .album-name {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+      }
+
+      .collaborators {
+        .collab-info {
+          position: relative;
+
+          .collab-info-images {
+            span {
+              position: absolute;
+            }
+          }
+
+          .collab-info-names {
+            position: absolute;
+            bottom: -65px;
+            min-width: max-content;
+            font-size: 1.2rem;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .image-cover {
+    position: relative;
+    cursor: pointer;
+
+    & > * {
+      pointer-events: none;
+    }
+
+    .play-buttons {
+      position: absolute;
+      left: 5px;
+      bottom: 5px;
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .other-info {
+    margin-left: 2rem;
+    
+    .fans {
+      display: inline-flex;
+      flex-direction: column;
+
+      & > * {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  // .tracks-content {
+  //   margin-top: 3rem;
+  // }
+
+  // .track-items {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-column-gap: 2rem;
+  // }
+}
+
+.featured-in-album {
+  .album-header {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem !important;
+  }
+}
+
+.discography {
+  margin-top: 3rem;
+}
+
+.playlist-info {
+  font-size: 1.2rem;
+  text-decoration: none !important;
+}

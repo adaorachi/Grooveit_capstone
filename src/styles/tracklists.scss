@@ -1,0 +1,115 @@
+@import 'utils.scss';
+
+.tracks-content {
+  margin: 8rem 1rem 1rem;
+  flex: 4;
+
+  .content {
+    width: 80%;
+  }
+
+  .track-item,
+  .first-row,
+  .second-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    font-family: unset;
+    font-size: 1rem;
+    color: #ee455d;
+    text-decoration: underline;
+  }
+
+  .track-item {
+    justify-content: space-between;
+    margin: 1rem 0;
+    border: 1px solid #232731;
+    border-bottom: none;
+    padding: 0.4rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 6px -6px black;
+    background-color: $primary_bgcolor2;
+    cursor: pointer;
+
+    .first-row,
+    .second-row {
+      pointer-events: none;
+    }
+
+    .contribs,
+    .extra-info {
+      pointer-events: initial;
+    }
+
+    .extra-info {
+      flex: 2 1;
+      max-width: max-content;
+
+      span {
+        margin: 0 0.2rem;
+      }
+    }
+  }
+
+  .first-row {
+    justify-content: flex-start;
+    flex: 2;
+  }
+
+  .first-row,
+  .second-row {
+    & > * {
+      padding-left: 0.5rem;
+    }
+  }
+
+  .image {
+    max-width: 3rem;
+    height: 3rem;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .navigate-buttons {
+    .button {
+      background: transparent;
+      border: 2px solid #ee455d;
+      border-radius: 50%;
+      outline: none;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.3rem;
+      cursor: pointer;
+    }
+  }
+
+  .numbering {
+    text-align: right;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+}
+
+.playlist-content {
+  width: 80%;
+  margin: 0 auto;
+}

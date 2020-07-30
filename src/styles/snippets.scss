@@ -1,0 +1,62 @@
+@import 'utils.scss';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.flex-props {
+  display: flex;
+  align-items: center;
+}
+
+.bg-primary {
+  background-color: $primary_bgcolor;
+}
+
+.text-primary {
+  color: $primary_color;
+}
+
+svg {
+  fill: #fff !important;
+}
+
+.horizontal-rule {
+  border: none;
+  height: 2px;
+  margin: 2rem;
+  background-color: #f7f5f570;
+}
+
+.view-list {
+  font-size: 1.1rem;
+  min-width: 3rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+  background-color: $secondary_bgcolor;
+  margin-right: 0.8rem;
+}
+
+a {
+  color: $primary_color;
+  text-decoration: none;
+}
+
+.audio-button {
+  .pause-button,
+  .play-button {
+    font-size: 2rem;
+  }
+
+  .play-button {
+    fill: $primary_color !important;
+  }
+
+  .pause-button {
+    display: none;
+    fill: $secondary_bgcolor !important;
+  }
+}

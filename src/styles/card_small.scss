@@ -1,0 +1,38 @@
+@import 'utils.scss';
+@mixin flex_props($justify:true) {
+  display: flex;
+  align-items: center;
+
+  @if
+    ($justify) {
+    justify-content: center;
+  }
+}
+
+.card-snip {
+  width: 14rem;
+
+  .card-small {
+    @include flex_props(false);
+
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: $primary_bgcolor2;
+    border-radius: 5px;
+    cursor: pointer;
+
+    & > * {
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: darken($primary_bgcolor2, 1);
+    }
+
+    .right-row,
+    .left-row {
+      @include flex_props();
+    }
+  }
+}
