@@ -1,0 +1,37 @@
+@import 'utils.scss';
+
+.image-round-container {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .image-round-item {
+    flex: 1;
+    max-width: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.3rem;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .image-round-img {
+    display: inline-block;
+    width: 7rem;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+  .image-round-name {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    font-family: $primary_font;
+  }
+}
