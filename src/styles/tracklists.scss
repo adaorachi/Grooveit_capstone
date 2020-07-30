@@ -41,6 +41,15 @@
     .first-row,
     .second-row {
       pointer-events: none;
+
+      & > * {
+        padding-left: 0.5rem;
+      }
+    }
+
+    .first-row {
+      justify-content: flex-start;
+      flex: 2;
     }
 
     .contribs,
@@ -55,18 +64,6 @@
       span {
         margin: 0 0.2rem;
       }
-    }
-  }
-
-  .first-row {
-    justify-content: flex-start;
-    flex: 2;
-  }
-
-  .first-row,
-  .second-row {
-    & > * {
-      padding-left: 0.5rem;
     }
   }
 
