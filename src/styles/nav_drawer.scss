@@ -1,0 +1,159 @@
+@import 'utils.scss';
+
+@mixin flex_props($justify:true) {
+  display: flex;
+  align-items: center;
+
+  @if
+    ($justify) {
+    justify-content: center;
+  }
+}
+
+.navbar-drawer {
+  position: fixed;
+  width: 70px;
+  height: 100%;
+  background: $primary_bgcolor2;
+  border-right: 1px solid darken($primary_bgcolor2, 2);
+  transition: width 250ms linear;
+  z-index: 101;
+
+  &.close {
+    width: 200px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .logo-brand {
+    font-size: 2rem;
+    position: absolute;
+    color: $primary_color;
+    left: 100px;
+    transition: left 250ms;
+    text-decoration: none;
+    font-family: $secondary_font;
+
+    &.close {
+      left: 10px;
+    }
+  }
+
+  .groove {
+    font-family: $secondary_font_sub !important;
+    color: $secondary_bgcolor;
+    font-size: 2.3rem;
+  }
+
+  .toggle-icon-close {
+    @include flex_props();
+
+    cursor: pointer;
+
+    .drawer-open,
+    .drawer-close.open {
+      display: inline-flex;
+    }
+
+    .drawer-open.close,
+    .drawer-close {
+      display: none;
+    }
+
+    .drawer-open {
+      background: $primary_bgcolor_tint;
+      border-radius: 50%;
+      padding: 0.5rem;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    .drawer-close {
+      position: absolute;
+      right: 0;
+      padding: 0.4rem;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+
+      &:hover {
+        background: $primary_bgcolor_tint;
+      }
+    }
+  }
+
+  .navbar-drawer-links {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .nav-list {
+      width: 100%;
+    }
+
+    .nav-item {
+      width: 90%;
+      box-sizing: border-box;
+      padding: 0.4rem 0.8rem;
+      margin: 0.6rem 0;
+      display: inline-block;
+
+      .nav-link {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: $secondary_bgcolor;
+        height: 25px;
+
+        .list-name {
+          width: 0;
+          padding: 0;
+          opacity: 0;
+          overflow: hidden;
+
+          &.close {
+            width: 100%;
+            padding-left: 1rem;
+            opacity: 1;
+            transition: width 500ms, opacity 500ms;
+          }
+        }
+
+        .list-icon {
+          display: inline-flex;
+
+          svg {
+            fill: $secondary_bgcolor;
+          }
+        }
+      }
+
+      &:hover,
+      &.active {
+        background-color: $secondary_bgcolor;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+
+      &:hover .nav-link,
+      &.active .nav-link {
+        color: $primary_color;
+      }
+
+      &:hover .list-icon svg,
+      &.active .list-icon svg {
+        fill: $primary_color;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import 'utils.scss';
+
+.slider-container {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.card {
+  width: 10rem !important;
+  height: 10rem;
+  min-width: 8rem;
+  border-radius: 20px;
+  border: 1px solid #2f2d2d;
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #0c0f17;
+  margin: 0 2rem !important;
+
+  .title {
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.6rem;
+    font-size: 1rem;
+    font-family: $primary_font;
+
+    span {
+      display: block;
+
+      a {
+        font-size: 1rem;
+        font-family: $primary_font;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.chart-cat {
+  padding: 2rem;
+  background: #2628359e;
+  border: 1px solid #444;
+  margin-bottom: 4rem;
+
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 2rem;
+  }
+}
+
+.image-card-content-flexed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .image-card-flexed {
+    margin-bottom: 2rem !important;
+    width: 9rem !important;
+  }
+}
+
+.artist-albums {
+  margin-top: 3rem;
+}
+
+.artist-albums-content {
+  width: 95%;
+  margin: 2rem auto 0;
+
+  &.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
