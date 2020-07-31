@@ -9,7 +9,6 @@ import '../../../styles/card_small.scss';
 
 const VideoCard = props => {
   const { musicInfo } = props;
-
   const vid = musicInfo.map(list => (
     <div className="card-small" key={list.id} id={list.id}>
       <div className="right-row">

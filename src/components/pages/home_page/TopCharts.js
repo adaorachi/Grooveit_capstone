@@ -123,7 +123,7 @@ const TopCharts = props => {
 };
 
 TopCharts.propTypes = {
-  assoc: PropTypes.arrayOf(PropTypes.object).isRequired,
+  assoc: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default TopCharts;

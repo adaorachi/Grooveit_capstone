@@ -176,8 +176,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Home.propTypes = {
-  musicAssoc: PropTypes.arrayOf(PropTypes.object).isRequired,
-  musicFeatured: PropTypes.arrayOf(PropTypes.object).isRequired,
+  musicAssoc: PropTypes.arrayOf(PropTypes.array).isRequired,
+  musicFeatured: PropTypes.arrayOf(PropTypes.array).isRequired,
   updateGenreFilter: PropTypes.func.isRequired,
 };
 

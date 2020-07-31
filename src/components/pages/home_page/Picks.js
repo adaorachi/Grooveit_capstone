@@ -65,7 +65,7 @@ const Picks = props => {
 };
 
 Picks.propTypes = {
-  assoc: PropTypes.arrayOf(PropTypes.object).isRequired,
+  assoc: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default Picks;

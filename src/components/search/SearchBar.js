@@ -12,10 +12,11 @@ class SearchBar extends Component {
     this.state = {
       search: null,
       display: null,
-      searchValue: null,
+      searchValue: '',
     };
     this.getSearch = this.getSearch.bind(this);
     this.removeAutoComplete = this.removeAutoComplete.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   getSearch(e) {
@@ -26,8 +27,6 @@ class SearchBar extends Component {
         if (res) {
           this.setState({
             search: res,
-            searchValue: e.target,
-            display: 'block',
           });
         } else {
           this.setState({
@@ -40,6 +39,13 @@ class SearchBar extends Component {
     }
   }
 
+  handleChange(e) {
+    this.setState({
+      searchValue: e.target.value,
+      display: 'block',
+    });
+  }
+
   removeAutoComplete() {
     this.setState({ display: 'none', searchValue: '' });
   }
@@ -48,6 +54,10 @@ class SearchBar extends Component {
     const { search } = this.state;
     const { display } = this.state;
     const { searchValue } = this.state;
+    const displayProp = prop => ({
+      display: prop,
+    });
+
     let dataSearch;
     if (search) {
       const data = search.slice(0, 5).map(list => (
@@ -59,8 +69,8 @@ class SearchBar extends Component {
         <div
           id="searched-data-output"
           className="searched-data-output"
-          onClick={() => this.removeAutoComplete()}
-          style={{ display }}
+          onClick={this.removeAutoComplete}
+          style={displayProp(display)}
         >
           {data}
         </div>
@@ -71,10 +81,12 @@ class SearchBar extends Component {
       <div>
         <div className="search-input">
           <input
+            type="text"
             className="search-bar-input"
             id="search-bar-input"
             autoComplete="off"
-            onInput={e => this.getSearch(e)}
+            onInput={this.getSearch}
+            onChange={this.handleChange}
             placeholder="Search..."
             value={searchValue}
           />

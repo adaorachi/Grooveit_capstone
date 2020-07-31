@@ -49,7 +49,7 @@ const mapStateToProps = state => ({
 
 Filter.propTypes = {
   filterChanged: PropTypes.func.isRequired,
-  musicGenre: PropTypes.arrayOf(PropTypes.object).isRequired,
+  musicGenre: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)).isRequired,
 };
 
 export default connect(mapStateToProps, null)(Filter);
