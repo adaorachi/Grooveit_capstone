@@ -6,7 +6,7 @@
 
   .search-input {
     &.scrolled {
-      background: $primary_bgcolor;
+      background: var(--nav-bgcolor);
       transition: background-color 150ms linear;
     }
   }
@@ -45,7 +45,7 @@
   }
 
   &::placeholder {
-    color: darken($primary_color, 40);
+    color: var(--primary_color);
     font-family: $primary_font;
     font-size: 1.3rem;
   }

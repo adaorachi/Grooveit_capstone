@@ -42,7 +42,7 @@ const VideoCard = props => {
 };
 
 VideoCard.propTypes = {
-  musicInfo: PropTypes.func.isRequired,
+  musicInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default VideoCard;

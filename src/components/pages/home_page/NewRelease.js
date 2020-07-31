@@ -65,7 +65,7 @@ const NewRelease = props => {
 };
 
 NewRelease.propTypes = {
-  assoc: PropTypes.func.isRequired,
+  assoc: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default NewRelease;

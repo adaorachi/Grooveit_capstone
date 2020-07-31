@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
@@ -10,10 +11,10 @@ import logo from '../../../images/menu.png';
 import '../../../styles/navbar.scss';
 import '../../../styles/nav_drawer.scss';
 import '../../../styles/search_box.scss';
+import '../../../styles/toggle_switch.scss';
 
 const Navbar = () => (
   <div className="navbar-wrapper">
-    {/* {toggleDark(e)} */}
     <nav className="navbar navbar-light">
       <div className="navbar-row">
         <ul className="navbar-nav">

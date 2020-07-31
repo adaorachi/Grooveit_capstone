@@ -10,17 +10,42 @@ $secondary_font: 'Teko', sans-serif;
 $secondary_font_sub: 'Niconne', cursive;
 
 :root {
+  --primary_bgcolor2: #0a0d17;
   --primary-bgcolor: #131722;
+  --primary_color: #fff;
+  --primary-bgcolor-opacity: #131722bf;
+  --header-home-image: linear-gradient(0deg, #131722bf, #131722bf), url('./../images/blackgirl33.png');
+  --header-image-after: url('./../images/wavy1.svg') center no-repeat;
+  --navbar-row-bg: linear-gradient(45deg, #131722b0, #131722bf);
+  --small-card-bg: #0c0f1b;
+  --small-card-color: #fff;
+  --card-bg: #0c0f17;
+  --card-border: #2f2d2d;
+  --filter-border: #4d4f56;
+  --slider-button-shadow: #080808;
   --secondary-color: #536390;
   --font-color: #424242;
-  --bg-color: #fff;
+  --nav-bgcolor: #131722;
   --heading-color: #292922;
 }
 
 [data-theme="dark"] {
-  --primary-bgcolor: #fff;
+  --primary_bgcolor2: #eceef3;
+  --primary-bgcolor: #aaa;
+  --primary_color: #131722;
+  --primary_color2: #ed215d;
+  --primary-bgcolor-opacity: #aaaaaa30;
+  --header-home-image: linear-gradient(0deg, #aaaaaa30, #aaaaaa30), url('./../images/whitegirl33.png');
+  --header-image-after: url('./../images/wavy2.svg') center no-repeat;
+  --navbar-row-bg: linear-gradient(45deg, #ffffff52, #ffffff24);
+  --small-card-bg: #dfe2ec;
+  --small-card-color: #131722;
+  --card-bg: #808084;
+  --card-border: #9a9292;
+  --filter-border: #fff;
+  --slider-button-shadow: #7d7373;
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
-  --bg-color: #161625;
+  --nav-bgcolor: #fff;
   --heading-color: #818cab;
 }
