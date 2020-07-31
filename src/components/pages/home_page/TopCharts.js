@@ -1,4 +1,7 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { shortenWord } from '../../../utils/Helper';
 import '../../../styles/image_card.scss';
@@ -91,7 +94,7 @@ const TopCharts = props => {
       allVals.push(value);
       allKeys.push(key);
     });
-    // console.log(allVals, allKeys)
+
     mapCharts = allVals.map((aa, index) => {
       if (aa.length > 0 && allVals[index] !== 'podcasts') {
         return (
@@ -117,6 +120,10 @@ const TopCharts = props => {
       {mapCharts}
     </div>
   );
+};
+
+TopCharts.propTypes = {
+  assoc: PropTypes.func.isRequired,
 };
 
 export default TopCharts;

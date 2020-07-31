@@ -1,5 +1,8 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
 
@@ -14,9 +17,7 @@ const settings = {
   slidesToScroll: 3,
 };
 
-const activeClass = index => {
-  return index === 0 ? 'active' : '';
-};
+const activeClass = index => (index === 0 ? 'active' : '');
 
 const Filter = props => {
   const { musicGenre, filterChanged } = props;
@@ -31,22 +32,24 @@ const Filter = props => {
         <span>{genre.name}</span>
       </div>
     ));
-  } else {
-    console.log('mem');
   }
 
   return (
     <div onClick={e => filterChanged(e)}>
-      <Slider {...settings} >
+      <Slider {...settings}>
         {mapGenres}
       </Slider>
     </div>
-
   );
 };
 
 const mapStateToProps = state => ({
   musicGenre: state.musicGenre,
 });
+
+Filter.propTypes = {
+  filterChanged: PropTypes.func.isRequired,
+  musicGenre: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, null)(Filter);

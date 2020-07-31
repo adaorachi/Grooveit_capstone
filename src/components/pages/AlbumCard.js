@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { shortenWord } from '../../utils/Helper';
@@ -35,6 +37,10 @@ const AlbumCard = props => {
       {albArr}
     </Slider>
   );
+};
+
+AlbumCard.propTypes = {
+  albArray: PropTypes.func.isRequired,
 };
 
 export default AlbumCard;

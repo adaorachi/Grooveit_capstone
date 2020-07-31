@@ -1,18 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import EqualizerIcon from '@material-ui/icons/Equalizer';
+import PropTypes from 'prop-types';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import PauseIcon from '@material-ui/icons/Pause';
+// import PauseIcon from '@material-ui/icons/Pause';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import RepeatIcon from '@material-ui/icons/Repeat';
-import musicp from '../../images/blackgirl3.jpg';
 import { convertSongDuration } from '../../utils/Helper';
 import '../../styles/footer.scss';
 
 const Footer = props => {
-  // console.log(props)
   const { musicFeatured } = props;
   let mostTop;
   let footerContent;
@@ -25,7 +23,7 @@ const Footer = props => {
         }
       });
     });
-    console.log(mostTop);
+
     footerContent = (
       <div className="footer-content">
         <div className="player-info">
@@ -69,5 +67,9 @@ const Footer = props => {
 const mapStateToProps = state => ({
   musicFeatured: state.musicFeatured,
 });
+
+Footer.propTypes = {
+  musicFeatured: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, null)(Footer);

@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
@@ -13,7 +15,6 @@ import '../../styles/slider_button.scss';
 import {
   convertSongDuration,
   convertSongDurationSec,
-  shortenWord,
 } from '../../utils/Helper';
 import Loading from './Loading';
 
@@ -34,7 +35,6 @@ const Playlists = props => {
 
   if (musicPlayList && musicPlayList.length > 0) {
     mapPlayList = musicPlayList[0].map(playlist => {
-      console.log(playlist)
       const listArray = playlist.tracks.data.map((list, index) => (
         <div key={list.id} className="track-item">
           <div className="first-row">
@@ -140,7 +140,6 @@ const Playlists = props => {
             </div>
           </div>
         </div>
-
       );
     });
   } else {
@@ -161,5 +160,9 @@ const Playlists = props => {
 const mapStateToProps = state => ({
   musicPlayList: state.musicPlayList,
 });
+
+Playlists.propTypes = {
+  musicPlayList: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, null)(Playlists);

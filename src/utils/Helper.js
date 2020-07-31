@@ -43,16 +43,15 @@ const convertSongDurationSec = t => {
   const time = Number(t);
   const h = Math.floor(time / 3600);
   const m = Math.floor((time % 3600) / 60);
-  // const s = Math.floor((time % 3600) % 60);
   const hDisplay = h > 0 ? h + (h === 1 ? 'hr' : ' hrs') : '';
   const mDisplay = m > 0 ? m + (m === 1 ? 'min' : ' mins') : '';
-  // const sDisplay = s > 0 ? s + (s === 1 ? ' second' : ' seconds') : '';
   return `${hDisplay} ${mDisplay}`;
 };
 
 const shuffle = arr => {
   for (let i = arr.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
+    // eslint-disable-next-line no-param-reassign
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
@@ -73,7 +72,7 @@ const convertUnixTime = time => {
 
 const updateDefaultPlayer = obj => {
   const {
-    playerImg, playerTitle, playerArtist, playerAudio,
+    playerImg, playerTitle, playerArtist,
   } = obj;
   document.getElementById('player-img').setAttribute('src', playerImg);
   document.getElementById('player-title').innerText = playerTitle;
@@ -97,7 +96,7 @@ const musicPlayer = (e, card) => {
 
   if (e.target.classList.contains(`${card}`)) {
     const { id } = e.target;
-    console.log(id);
+    // console.log(id);
     const audio = document.getElementById(`audio-${id}`);
     const artist = document.getElementById(`artist-${id}`).innerText;
     const title = document.getElementById(`title-${id}`).innerText;
@@ -114,7 +113,9 @@ const musicPlayer = (e, card) => {
 
       document.getElementById(`play-button-${id}`).style.display = 'none';
       document.getElementById(`pause-button-${id}`).style.display = 'block';
-      mem(id);
+      if (card !== 'audio-button') {
+        mem(id);
+      }
     } else {
       audio.pause();
       document.getElementById(`play-button-${id}`).style.display = 'block';
@@ -129,27 +130,8 @@ const navScroll = () => {
       document.querySelector('.navbar-row').classList.add('scrolled');
       document.querySelector('.search-input').classList.add('scrolled');
       document.querySelector('.search-bar-input').classList.add('scrolled');
-      
     }
   });
-  // $(document).scroll(function (){
-  // 	var $nav = $(".nav");
-  // 	if($(this).scrollTop() >= 200){
-  // 		$nav.addClass('scrolled');
-  // 		$nav.removeClass('none');
-  // 		$('.nav-link').addClass('scrolled')
-  // 	} else if ($(this).scrollTop() < 200 && $(this).scrollTop() >= $nav.height()) {
-  // 		$nav.removeClass('scrolled');
-  // 		$('.nav-link').removeClass('scrolled')
-  // 		$nav.addClass('none');
-  // 	}else{
-  // 		$nav.removeClass('scrolled');
-  // 		$nav.removeClass('none');
-  // 		$('.cat-links .nav-link').removeClass('scrolled')
-
-  // 	}
-
-  // })
 };
 
 export {

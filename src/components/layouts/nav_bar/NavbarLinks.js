@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavbarLinks = props => {
   const { link } = props;
@@ -9,6 +10,10 @@ const NavbarLinks = props => {
       </a>
     </li>
   );
+};
+
+NavbarLinks.propTypes = {
+  link: PropTypes.func.isRequired,
 };
 
 export default NavbarLinks;

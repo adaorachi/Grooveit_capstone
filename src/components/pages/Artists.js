@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../../styles/image_circular.scss';
@@ -18,7 +19,7 @@ const Artists = props => {
         genreName.push(art.name);
       });
     });
-    // console.log(artistData);
+
     const mapp = artist => (
       artist.map(a => (
         <div key={a.id} id={a.id}>
@@ -60,5 +61,9 @@ const Artists = props => {
 const mapStateToProps = state => ({
   musicArtist: state.musicArtist,
 });
+
+Artists.propTypes = {
+  musicArtist: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, null)(Artists);

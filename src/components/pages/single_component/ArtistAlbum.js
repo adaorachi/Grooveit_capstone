@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import PauseCircleFilledIcon from '@material-ui/icons/PauseCircleFilled';
 import SpeakerGroupIcon from '@material-ui/icons/SpeakerGroup';
 import {
-  convertSongDuration,
   convertSongDurationSec,
-  convertUnixTime,
-  shortenWord,
   shuffle,
-  musicPlayer,
 } from '../../../utils/Helper';
 import '../../../styles/tracklists.scss';
 import '../../../styles/album_header.scss';
 import '../../../styles/comment_section.scss';
 import Loading from '../Loading';
+import CommentCard from '../snippet_component/CommentCard';
+import ArtistContributors from '../snippet_component/ArtistContributors';
+import AlbumDiscography from '../snippet_component/AlbumDiscography';
+import AlbumTrackList from '../snippet_component/AlbumTrackList';
 
 class ArtistAlbum extends Component {
   constructor(props) {
@@ -27,6 +26,8 @@ class ArtistAlbum extends Component {
       comments: null,
       tracks: null,
     };
+
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
@@ -64,7 +65,7 @@ class ArtistAlbum extends Component {
           });
         });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -80,37 +81,6 @@ class ArtistAlbum extends Component {
       if (info && comments && tracks) {
         let discographyTracks = shuffle(tracks.data.data).slice(0, 4);
         discographyTracks = discographyTracks.filter(id => id !== info.id);
-
-        const feats = contributor => {
-          let names;
-          let images;
-          let contribs;
-          if (contributor) {
-            names = contributor.map((contrib, index) => (
-              <Link to={`/artists/${contrib.id}`} key={contrib.id} className="collaborator-info">
-                {contrib.name}
-                {(contributor.length === 0 || index === contributor.length - 1) ? '' : ', '}
-              </Link>
-            ));
-            images = contributor.map((contrib, index) => (
-              <span key={contrib.id} style={{ zIndex: index + 1, left: index * 25 }}>
-                <img className="contrib-img" src={contrib.picture_medium} alt={contrib.name} width="40" />
-              </span>
-            ));
-
-            contribs = (
-              <div className="collab-info">
-                <div className="collab-info-images">
-                  {images}
-                </div>
-                <div className="collab-info-names">
-                  {names}
-                </div>
-              </div>
-            );
-          }
-          return contribs;
-        };
 
         const genres = genre => {
           let gen;
@@ -128,74 +98,6 @@ class ArtistAlbum extends Component {
           return gen;
         };
 
-        const listArray = info.tracks.data.map((list, index) => (
-          <div key={list.id} className="track-item" id={list.id}>
-            <div className="first-row">
-              <span>{index + 1}</span>
-              <span className="image">
-                <img id={`image-${list.id}`} src={info.cover_medium} alt={list.title} width="60" />
-              </span>
-              <div className="audio-button">
-                <PlayCircleFilledIcon className="play-button" id={`play-button-${list.id}`} />
-                <PauseCircleFilledIcon className="pause-button" id={`pause-button-${list.id}`} />
-              </div>
-              <span className="title">
-                <span id={`title-${list.id}`}>
-                  {list.title}
-                </span>
-                <span id={`artist-${list.id}`} hidden>{}</span>
-              </span>
-            </div>
-            <div className="second-row">
-              <span>
-                {convertSongDuration(list.duration)}
-              </span>
-            </div>
-            <div className="audio-file">
-              <audio className="audio" id={`audio-${list.id}`}>
-                <track kind="captions" />
-                <source src={list.preview} type="audio/ogg" />
-                <source id={`audio-prev-${list.id}`} src={list.preview} type="audio/mpeg" />
-              </audio>
-            </div>
-          </div>
-        ));
-
-        const discography = discographyTracks.map(list => (
-          <Link to={`/albums/${list.id}`} key={list.id} className="card">
-            <div className="card-content">
-              <div className="card-img">
-                <img src={list.cover_big} alt={list.title} width="100" />
-              </div>
-              <div className="info">
-                <span>{shortenWord(list.title, 15)}</span>
-                <span>{list.release_date}</span>
-              </div>
-            </div>
-          </Link>
-        ));
-
-        let commentArray;
-        if (comments.data.length > 1) {
-          commentArray = comments.data.map(list => (
-            <div key={list.id} className="comment-card">
-              <div className="author-img">
-                <img src={list.author.picture_medium} alt={list.author.name} width="40"/>
-              </div>
-              <div className="text">
-                <p>{list.text}</p>
-                <data>{convertUnixTime(list.date)}</data>
-              </div>
-            </div>
-          ));
-        } else {
-          commentArray = (
-            <p>
-              No Comment
-            </p>
-          );
-        }
-
         albumContent = (
           <div className="album-page-content">
             <div className="album-header">
@@ -207,7 +109,7 @@ class ArtistAlbum extends Component {
                   {info.title}
                 </h4>
                 <div className="collaborators">
-                  {feats(info.contributors)}
+                  <ArtistContributors contributor={info.contributors} />
                 </div>
               </div>
             </div>
@@ -227,7 +129,7 @@ class ArtistAlbum extends Component {
                 </span>
               </div>
             </div>
-            <div className="tracks-content">
+            <div className="album-tracks tracks-content">
               <div className="contents">
                 <div className="heading">
                   <h3>
@@ -241,8 +143,8 @@ class ArtistAlbum extends Component {
                     {convertSongDurationSec(info.duration)}
                   </h3>
                 </div>
-                <div className="track-items" onClick={e => musicPlayer(e, 'track-item')}>
-                  {listArray}
+                <div>
+                  <AlbumTrackList tracklist={info.tracks.data} albumInfo={info} />
                 </div>
               </div>
             </div>
@@ -250,8 +152,8 @@ class ArtistAlbum extends Component {
               <div className="header">
                 <h3>discography</h3>
               </div>
-              <div className="artist-albums-content content">
-                {discography}
+              <div className="discography-items">
+                <AlbumDiscography discography={discographyTracks} />
               </div>
             </div>
             <div className="comment-content">
@@ -259,7 +161,7 @@ class ArtistAlbum extends Component {
                 <h3>Comments</h3>
               </div>
               <div className="content">
-                {commentArray}
+                <CommentCard commentData={comments.data} />
               </div>
             </div>
           </div>
@@ -273,7 +175,7 @@ class ArtistAlbum extends Component {
           Opps, We encountered an error. Refresh the page or you come back later!
         </div>
       );
-      console.log(error);
+      // console.log(error);
     }
 
     return (
@@ -283,5 +185,9 @@ class ArtistAlbum extends Component {
     );
   }
 }
+
+ArtistAlbum.propTypes = {
+  match: PropTypes.func.isRequired,
+};
 
 export default ArtistAlbum;

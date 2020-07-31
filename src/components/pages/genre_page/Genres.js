@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import '../../../styles/image_circular.scss';
 import { Link } from 'react-router-dom';
@@ -44,5 +45,9 @@ const Genres = props => {
 const mapStateToProps = state => ({
   musicGenre: state.musicGenre,
 });
+
+Genres.propTypes = {
+  musicGenre: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, null)(Genres);

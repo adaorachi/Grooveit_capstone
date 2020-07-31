@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { shortenWord } from '../../../utils/Helper';
@@ -13,6 +14,8 @@ class ArtistGenre extends Component {
       name: null,
       radio: null,
     };
+
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
@@ -34,7 +37,7 @@ class ArtistGenre extends Component {
           });
         });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -90,7 +93,7 @@ class ArtistGenre extends Component {
           Opps, We encountered an error. Refresh the page or you come back later!
         </div>
       );
-      console.log(error);
+      // console.log(error);
     }
 
     return (
@@ -100,5 +103,9 @@ class ArtistGenre extends Component {
     );
   }
 }
+
+ArtistGenre.propTypes = {
+  match: PropTypes.func.isRequired,
+};
 
 export default ArtistGenre;

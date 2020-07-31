@@ -1,6 +1,7 @@
-/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import PauseCircleFilledIcon from '@material-ui/icons/PauseCircleFilled';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import { Link } from 'react-router-dom';
 import { FILTER_GENRE, UPDATE_MUSIC } from '../../../actions/index';
@@ -69,33 +70,37 @@ class Home extends Component {
             <div className="first-row flex-props">
               <div className="groovy-content">
                 <div className="header-text">
-                  <h1>What is new now?</h1>
+                  <h1>What is groovy now?</h1>
                   <h3>
                     Music of the day
                   </h3>
                 </div>
-                <div className="groovy-music" id={topFirst.id} onClick={e => musicPlayer(e, 'groovy-music')}>
-                  <p id={`title-${topFirst.id}`}>{topFirst.title}</p>
+                <div className="groovy-music">
+                  <Link to={`/tracks/${topFirst.id}`}>
+                    <p id={`title-${topFirst.id}`}>{topFirst.title}</p>
+                  </Link>
                   <div className="flex-props">
-                    <img id={`image-${topFirst.id}`} src={topFirst.artist.picture_medium} className="groovy-image" alt={topFirst.album.title} width="40" />
-                    <p id={`artist-${topFirst.id}`}>{topFirst.artist.name}</p>
+                    <img id={`image-${topFirst.id}`} src={topFirst.album.cover_medium} className="groovy-image" alt={topFirst.album.title} width="40" />
+                    <Link to={`/artists/${topFirst.artist.id}`}>
+                      <span id={`artist-${topFirst.id}`}>{topFirst.artist.name}</span>
+                    </Link>
                   </div>
-                  <audio>
-                    <track kind="captions" />
-                    <source id={`image-${topFirst.id}`} src={topFirst.preview} type="audio/ogg" />
-                    <source src={topFirst.preview} type="audio/mpeg" />
-                    Your browser does not support the audio tag.
-                  </audio>
                 </div>
               </div>
-              <div className="play-music-button">
-                <PlayCircleFilledIcon id={`play-button-${topFirst.id}`} className="play-music-icon" />
-                <PlayCircleFilledIcon id={`pause-button-${topFirst.id}`} className="play-music-icon" />
-              </div>
+              <button type="button" className="audio-button play-music-button" id={topFirst.id} onClick={e => musicPlayer(e, 'audio-button')}>
+                <PlayCircleFilledIcon id={`play-button-${topFirst.id}`} className="play-button play-music-icon" />
+                <PauseCircleFilledIcon id={`pause-button-${topFirst.id}`} className="pause-button play-music-icon" />
+              </button>
+              <audio id={`audio-${topFirst.id}`}>
+                <track kind="captions" />
+                <source src={topFirst.preview} type="audio/ogg" />
+                <source id={`audio-prev-${topFirst.id}`} src={topFirst.preview} type="audio/mpeg" />
+                Your browser does not support the audio tag.
+              </audio>
             </div>
             <div className="second-row past-groovy-videos">
               <div className="header-text">
-                <h3>Last 3 Music of the day</h3>
+                <h3>Last 3 Musics of the day</h3>
               </div>
               <VideoCard musicInfo={topOthers} />
             </div>
@@ -169,5 +174,11 @@ const mapDispatchToProps = dispatch => ({
     dispatch(UPDATE_MUSIC(music));
   },
 });
+
+Home.propTypes = {
+  musicAssoc: PropTypes.func.isRequired,
+  musicFeatured: PropTypes.func.isRequired,
+  updateGenreFilter: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

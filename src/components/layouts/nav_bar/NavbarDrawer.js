@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HomeIcon from '@material-ui/icons/Home';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import AlbumIcon from '@material-ui/icons/Album';
@@ -30,6 +31,11 @@ const NavbarDrawer = props => {
       </NavLink>
     </li>
   );
+};
+
+NavbarDrawer.propTypes = {
+  link: PropTypes.func.isRequired,
+  index: PropTypes.func.isRequired,
 };
 
 export default NavbarDrawer;

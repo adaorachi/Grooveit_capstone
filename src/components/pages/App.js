@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ScrollTop>
-  
+
           <div className="app-body-container" onScroll={navScroll()}>
             <div className="wrapper-container bg-primary">
               <Navbar onKeyDown={this.handleKeyPress} />

@@ -45,12 +45,17 @@ a {
 }
 
 .audio-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
   .pause-button,
   .play-button {
     font-size: 2rem;
   }
 
-  .play-button {
+  .play-button:not(.play-music-icon) {
     fill: $primary_color !important;
   }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { shortenWord } from '../../../utils/Helper';
@@ -23,7 +24,6 @@ const Picks = props => {
   if (assoc && assoc.length > 0) {
     assoc.forEach(ass => {
       picks = ass[2].data.data;
-      // console.log(ass[1].data)
     });
 
     mapPicks = picks.map(list => (
@@ -54,13 +54,18 @@ const Picks = props => {
         </div>
       </div>
     ));
-}
+  }
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
       {mapPicks}
     </Slider>
   );
+};
+
+Picks.propTypes = {
+  assoc: PropTypes.func.isRequired,
 };
 
 export default Picks;

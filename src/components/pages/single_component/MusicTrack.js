@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
@@ -6,6 +9,7 @@ import PauseCircleFilledIcon from '@material-ui/icons/PauseCircleFilled';
 import '../../../styles/album_header.scss';
 import Loading from '../Loading';
 import { musicPlayer } from '../../../utils/Helper';
+import ArtistContributors from '../snippet_component/ArtistContributors';
 
 class MusicTrack extends Component {
   constructor(props) {
@@ -42,7 +46,7 @@ class MusicTrack extends Component {
         });
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -51,37 +55,6 @@ class MusicTrack extends Component {
     let trackList;
     try {
       if (track) {
-        const feats = contributor => {
-          let names;
-          let images;
-          let contribs;
-          if (contributor) {
-            names = contributor.map((contrib, index) => (
-              <Link to={`/artists/${contrib.id}`} key={contrib.id} className="collaborator-info">
-                {contrib.name}
-                {(contributor.length === 0 || index === contributor.length - 1) ? '' : ', '}
-              </Link>
-            ));
-            images = contributor.map((contrib, index) => (
-              <span key={contrib.id} style={{ zIndex: index + 1, left: index * 25 }}>
-                <img className="contrib-img" src={contrib.picture_medium} alt={contrib.name} width="40" />
-              </span>
-            ));
-
-            contribs = (
-              <div className="collab-info">
-                <div className="collab-info-images">
-                  {images}
-                </div>
-                <div className="collab-info-names">
-                  {names}
-                </div>
-              </div>
-            );
-          }
-          return contribs;
-        };
-
         trackList = (
           <div className="main-content">
             <div className="album-page-content">
@@ -98,7 +71,7 @@ class MusicTrack extends Component {
                     {track.title}
                   </h4>
                   <div id={`artist-${track.id}`} className="collaborators">
-                    {feats(track.contributors)}
+                    <ArtistContributors contributor={track.contributors} />
                   </div>
                 </div>
                 <div className="audio-file">
@@ -136,7 +109,7 @@ class MusicTrack extends Component {
           Opps, We encountered an error. Refresh the page or you come back later!
         </div>
       );
-      console.log(error);
+      // console.log(error);
     }
     return (
       <div className="home-content">
@@ -145,5 +118,9 @@ class MusicTrack extends Component {
     );
   }
 }
+
+MusicTrack.propTypes = {
+  match: PropTypes.func.isRequired,
+};
 
 export default MusicTrack;
