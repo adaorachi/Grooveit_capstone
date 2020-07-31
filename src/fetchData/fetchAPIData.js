@@ -37,9 +37,9 @@ const arr = data => {
 
 const fetchMusicAssoc = () => dispatch => {
   const cors = '';
-  const releases = () => axios.get(`${cors}http://api.deezer.com/editorial/0/releases`);
-  const charts = () => axios.get(`${cors}http://api.deezer.com/editorial/0/charts`);
-  const selection = () => axios.get(`${cors}http://api.deezer.com/editorial/0/selection`);
+  const releases = () => axios.get(`${cors}https://api.deezer.com/editorial/0/releases`);
+  const charts = () => axios.get(`${cors}https://api.deezer.com/editorial/0/charts`);
+  const selection = () => axios.get(`${cors}https://api.deezer.com/editorial/0/selection`);
   Promise.all([releases(), charts(), selection()])
     .then(results => {
       dispatch(FETCH_ASSOC(results));
@@ -60,7 +60,7 @@ const fetchMusicAssoc = () => dispatch => {
         });
       });
 
-      const promiseArray = allPlaylists.map(id => axios.get(`${cors}http://api.deezer.com/playlist/${id}`));
+      const promiseArray = allPlaylists.map(id => axios.get(`${cors}https://api.deezer.com/playlist/${id}`));
       Promise.all(promiseArray)
         .then(res => {
           dispatch(FETCH_PLAYLIST(arr(res)));
@@ -69,7 +69,7 @@ const fetchMusicAssoc = () => dispatch => {
           throw error;
         });
 
-      const promiseArray2 = topFeatured.map(id => axios.get(`${cors}http://api.deezer.com/track/${id}`));
+      const promiseArray2 = topFeatured.map(id => axios.get(`${cors}https://api.deezer.com/track/${id}`));
       Promise.all(promiseArray2)
         .then(res => {
           dispatch(FETCH_FEATURED(arr(res)));
@@ -82,7 +82,7 @@ const fetchMusicAssoc = () => dispatch => {
 
 const fetchMusicGenre = () => dispatch => axios({
   method: 'GET',
-  url: 'http://api.deezer.com/genre',
+  url: 'https://api.deezer.com/genre',
   params: {
     ID: 12345,
   },
@@ -92,7 +92,7 @@ const fetchMusicGenre = () => dispatch => axios({
     const cors = '';
     const allGenreID = getGenreID(response.data, 'id');
     const allGenreName = getGenreID(response.data, 'name');
-    const promiseArray = allGenreID.map(id => axios.get(`${cors}http://api.deezer.com/genre/${id}/artists`));
+    const promiseArray = allGenreID.map(id => axios.get(`${cors}https://api.deezer.com/genre/${id}/artists`));
 
     Promise.all(promiseArray)
       .then(res => {
