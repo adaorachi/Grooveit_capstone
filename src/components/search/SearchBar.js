@@ -52,7 +52,7 @@ class SearchBar extends Component {
     return (
       <div>
         <div className="search-input">
-          <input className="search-bar-input" id="search-bar-input" onInput={e => this.getSearch(e)} placeholder="Search..." />
+          <input className="search-bar-input" id="search-bar-input" autoComplete="off" onInput={e => this.getSearch(e)} placeholder="Search..." />
         </div>
         {dataSearch}
       </div>

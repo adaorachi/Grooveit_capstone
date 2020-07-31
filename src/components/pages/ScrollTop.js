@@ -8,7 +8,7 @@ class ScrollTop extends Component {
     if (location !== prevProps.location) {
       window.scrollTo(0, 0);
       document.getElementById('search-bar-input').value = '';
-      // document.getElementById('searched-data-output').style.display = 'none';
+      document.getElementById('searched-data-output').style.display = 'none';
     }
   }
 

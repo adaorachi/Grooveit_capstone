@@ -130,6 +130,10 @@ const navScroll = () => {
       document.querySelector('.navbar-row').classList.add('scrolled');
       document.querySelector('.search-input').classList.add('scrolled');
       document.querySelector('.search-bar-input').classList.add('scrolled');
+    } else if (window.scrollY < 200) {
+      document.querySelector('.navbar-row').classList.remove('scrolled');
+      document.querySelector('.search-input').classList.remove('scrolled');
+      document.querySelector('.search-bar-input').classList.remove('scrolled');
     }
   });
 };
