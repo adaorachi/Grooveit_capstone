@@ -10,7 +10,7 @@ html {
 }
 
 .bg-primary {
-  background-color: $primary_bgcolor;
+  background-color: var(--primary-bgcolor);
 }
 
 .text-primary {

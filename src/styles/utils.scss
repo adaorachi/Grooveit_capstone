@@ -8,3 +8,19 @@ $primary_color: #fff;
 $primary_font: 'Cormorant Infant', serif;
 $secondary_font: 'Teko', sans-serif;
 $secondary_font_sub: 'Niconne', cursive;
+
+:root {
+  --primary-bgcolor: #131722;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-bgcolor: #fff;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}

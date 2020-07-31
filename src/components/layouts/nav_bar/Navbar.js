@@ -5,7 +5,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NavbarLink from './NavbarLinks';
 import NavbarDrawer from './NavbarDrawer';
 import SearchBar from '../../search/SearchBar';
-import { closeDrawer } from '../../../utils/Helper';
+import { closeDrawer, toggleDark } from '../../../utils/Helper';
 import logo from '../../../images/menu.png';
 import '../../../styles/navbar.scss';
 import '../../../styles/nav_drawer.scss';
@@ -13,6 +13,7 @@ import '../../../styles/search_box.scss';
 
 const Navbar = () => (
   <div className="navbar-wrapper">
+    {/* {toggleDark(e)} */}
     <nav className="navbar navbar-light">
       <div className="navbar-row">
         <ul className="navbar-nav">
@@ -30,6 +31,7 @@ const Navbar = () => (
         <a href="/" className="logo-brand">
           <span className="groove">Groove</span>
           <span className="it">IT</span>
+          <input type="checkbox" onChange={() => toggleDark()} id="toggle-dark" className="theme-switch" />
         </a>
         <span className="toggle-icon-close" id="toggle-icon-close" onClick={closeDrawer}>
           <ChevronLeftIcon className="drawer-close" />

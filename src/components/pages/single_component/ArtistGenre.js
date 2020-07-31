@@ -26,9 +26,8 @@ class ArtistGenre extends Component {
 
   fetchData(genreId) {
     try {
-      const cors = '';
-      const genreName = () => axios.get(`${cors}https://api.deezer.com/genre/${genreId}`);
-      const genreRadio = () => axios.get(`${cors}https://api.deezer.com/genre/${genreId}/radios`);
+      const genreName = () => axios.get(`https://api.deezer.com/genre/${genreId}`);
+      const genreRadio = () => axios.get(`https://api.deezer.com/genre/${genreId}/radios`);
 
       Promise.all([genreName(), genreRadio()])
         .then(results => {
