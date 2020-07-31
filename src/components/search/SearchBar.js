@@ -84,6 +84,7 @@ class SearchBar extends Component {
             type="text"
             className="search-bar-input"
             id="search-bar-input"
+            data-testid="search-bar-input"
             autoComplete="off"
             onInput={this.getSearch}
             onChange={this.handleChange}

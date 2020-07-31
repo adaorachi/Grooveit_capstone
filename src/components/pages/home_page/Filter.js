@@ -29,7 +29,7 @@ const Filter = props => {
         <span>
           <img src={genre.picture_small} alt={genre.name} width="30" />
         </span>
-        <span>{genre.name}</span>
+        <span data-testid={genre.name}>{genre.name}</span>
       </div>
     ));
   }

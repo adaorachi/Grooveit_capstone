@@ -34,4 +34,14 @@ test('landing page rendering or navigation', () => {
   expect(getByTestId('Recommended-link').textContent).toBe('Recommended');
 });
 
+test('landing page rendering or navigation', () => {
+  const { getByTestId } = reduxRendering(
+    <MemoryRouter>
+      <Navbar />
+    </MemoryRouter>, div,
+  );
+
+  expect(getByTestId('Charts-link').textContent).toBe('Charts');
+});
+
 export default reduxRendering;
