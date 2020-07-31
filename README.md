@@ -151,9 +151,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 **MaryAnn Chukwuka**
 
-- Github: [@mikenath223](https://github.com/adaorachi)
-- Twitter: [@Michgolden_Nath](https://twitter.com/adaorachi)
-- Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/adaorachi/)
+- Github: [@adaorachi](https://github.com/adaorachi)
+- Twitter: [@Chukwuka_maryann](https://twitter.com/adaorachi)
+- Linkedin: [MaryAnn Chukwuka](https://https://www.linkedin.com/in/adaorachi/)
   <br />
 
 # License
