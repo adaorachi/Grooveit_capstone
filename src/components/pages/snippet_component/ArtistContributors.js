@@ -18,7 +18,7 @@ const ArtistContributors = props => {
     names = contributor.map((contrib, index) => (
       <Link to={`/artists/${contrib.id}`} key={contrib.id} className="collaborator-info">
         {contrib.name}
-        {(contributor.length === 0 || index === contributor.length - 1) ? '' : ', '}
+        {(contributor.length === 1 || index === contributor.length - 1) ? '' : ', '}
       </Link>
     ));
     images = contributor.map((contrib, index) => (

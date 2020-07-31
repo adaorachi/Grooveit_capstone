@@ -47,8 +47,9 @@ class ArtistAlbum extends Component {
 
   fetchData(albumId) {
     try {
-      const albumInfo = () => axios.get(`https://api.deezer.com/album/${albumId}`);
-      const albumComments = () => axios.get(`https://api.deezer.com/album/${albumId}/comments`);
+      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const albumInfo = () => axios.get(`${cors}https://api.deezer.com/album/${albumId}`);
+      const albumComments = () => axios.get(`${cors}https://api.deezer.com/album/${albumId}/comments`);
 
       Promise.all([albumInfo(), albumComments()])
         .then(results => {
@@ -57,7 +58,7 @@ class ArtistAlbum extends Component {
             comments: results[1].data,
           });
           const artistId = results[0].data.artist.id;
-          const albumTracks = axios.get(`https://api.deezer.com/artist/${artistId}/albums`);
+          const albumTracks = axios.get(`${cors}https://api.deezer.com/artist/${artistId}/albums`);
           albumTracks.then(response => {
             this.setState({
               tracks: response,
