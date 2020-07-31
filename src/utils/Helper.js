@@ -137,16 +137,14 @@ const navScroll = () => {
 const toggleDark = () => {
   const toggleSwitch = document.getElementById('toggle-dark');
 
-  toggleSwitch.addEventListener('change', (e) => {
+  toggleSwitch.addEventListener('change', e => {
     if (e.target.checked) {
-      console.log('me')
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-      console.log('yee')
       document.documentElement.setAttribute('data-theme', 'light');
     }
-  })
- 
+  });
+
   // function switchTheme(e) {
   //   if (e.target.checked) {
   //     document.documentElement.setAttribute('data-theme', 'dark');

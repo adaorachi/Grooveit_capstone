@@ -18,6 +18,7 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 ## Table of Contents
 
 - [About Project](#about-project)
+- [Screen Shots And Presentation](#screen-shots)
 - [Built With](#built-with)
 - [Technologies Employed](#technologies-employed)
 - [Live Preview](#live-preview)
@@ -41,7 +42,9 @@ A music app built with the React and Redux frameworks. It shows music artist acc
   A user can view a single artist.
   A user can view a single artist track.
   A user can view a single artist album tracks.
-  A user can view new released tracks, recommended tracks and top chart informatoin,
+  A user can view new released tracks, recommended tracks and top chart information.
+  A user can listen to audio music. A play, pause and replay features were also implemented.
+  A user can search for music tracks.
   A user can toggle between dark and light mode.
 - A user can navigate throught the pages of the site:
 
@@ -50,7 +53,17 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 * Album Page
 * Genre Page
 
-<img src="src/images/screenshot/screenshot.gif"/>
+<!-- Screen shots -->
+
+## Screen Shots And Presentation
+<img src="src/images/screenshots/Screenshot1.png"/>
+<img src="src/images/screenshots/Screenshot2.png"/>
+<img src="src/images/screenshots/Screenshot3.png"/>
+
+<br>
+
+* You can watch a live demostration of the project using this link - https://www.loom.com/share/13ccdf43aa77463892726c600d6ba21a
+
 <!-- BUILT WITH -->
 
 # Built With
@@ -80,8 +93,8 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 <!-- LIVE PREVIEW -->
 
 ## LIVE PREVIEW
-* Here is a link to the live version of the app - https://groove-it.herokuapp.com/
-
+* Here is a link to the live version of the app - [Groovy-IT Music App](https://groovy-it.herokuapp.com/
+)
 <!-- REQUIRED INSTALLATION -->
 
 ## REQUIRED INSTALLATIONS
