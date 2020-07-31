@@ -40,7 +40,7 @@ const AlbumCard = props => {
 };
 
 AlbumCard.propTypes = {
-  albArray: PropTypes.func.isRequired,
+  albArray: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default AlbumCard;

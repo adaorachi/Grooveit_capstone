@@ -225,7 +225,7 @@ class ArtistPlaylist extends Component {
 }
 
 ArtistPlaylist.propTypes = {
-  match: PropTypes.func.isRequired,
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default ArtistPlaylist;

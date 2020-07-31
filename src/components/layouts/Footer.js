@@ -69,7 +69,7 @@ const mapStateToProps = state => ({
 });
 
 Footer.propTypes = {
-  musicFeatured: PropTypes.func.isRequired,
+  musicFeatured: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default connect(mapStateToProps, null)(Footer);

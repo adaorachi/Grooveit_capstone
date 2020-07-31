@@ -34,8 +34,8 @@ const NavbarDrawer = props => {
 };
 
 NavbarDrawer.propTypes = {
-  link: PropTypes.func.isRequired,
-  index: PropTypes.func.isRequired,
+  link: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default NavbarDrawer;

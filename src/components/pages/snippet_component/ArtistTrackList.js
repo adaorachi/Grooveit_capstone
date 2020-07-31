@@ -66,7 +66,7 @@ const ArtistTrackList = props => {
 };
 
 ArtistTrackList.propTypes = {
-  playlist: PropTypes.func.isRequired,
+  playlist: PropTypes.arrayOf(PropTypes.any).isRequired,
   trackNo: PropTypes.string.isRequired,
 };
 

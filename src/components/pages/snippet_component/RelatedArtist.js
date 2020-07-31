@@ -23,7 +23,7 @@ const RelatedArtist = props => {
 };
 
 RelatedArtist.propTypes = {
-  relatedArray: PropTypes.func.isRequired,
+  relatedArray: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default RelatedArtist;

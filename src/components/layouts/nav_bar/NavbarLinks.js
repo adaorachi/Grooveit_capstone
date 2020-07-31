@@ -13,7 +13,7 @@ const NavbarLinks = props => {
 };
 
 NavbarLinks.propTypes = {
-  link: PropTypes.func.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default NavbarLinks;

@@ -13,7 +13,7 @@
 
 ### Groovy-It Music App
 
-A music app built with the React and Redux frameworks. It shows music artist accoring to the genres and each artist page contains a list of music tracks and album for that artist. The project name for this project is Catalogue of Dog Clothes from the project requirement.
+A music app built with the React and Redux frameworks. It shows music artist accoring to the genres and each artist page contains a list of music tracks and album for that artist. The project name for this project is [Catalogue of Dog Clothes](https://www.notion.so/Catalogue-of-Dog-Clothes-8bf1512b8ab34fa28848beb8ab698a32) from the project requirement.
 
 ## Table of Contents
 
