@@ -39,7 +39,7 @@ class MusicTrack extends Component {
 
   fetchData(trackId) {
     try {
-      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const cors = '';
       const artistInfo = axios.get(`${cors}https://api.deezer.com/track/${trackId}`);
       artistInfo.then(result => {
         this.setState({

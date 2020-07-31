@@ -26,7 +26,7 @@ class ArtistGenre extends Component {
 
   fetchData(genreId) {
     try {
-      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const cors = '';
       const genreName = () => axios.get(`${cors}https://api.deezer.com/genre/${genreId}`);
       const genreRadio = () => axios.get(`${cors}https://api.deezer.com/genre/${genreId}/radios`);
 

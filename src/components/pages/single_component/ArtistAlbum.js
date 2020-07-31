@@ -47,7 +47,7 @@ class ArtistAlbum extends Component {
 
   fetchData(albumId) {
     try {
-      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const cors = '';
       const albumInfo = () => axios.get(`${cors}https://api.deezer.com/album/${albumId}`);
       const albumComments = () => axios.get(`${cors}https://api.deezer.com/album/${albumId}/comments`);
 

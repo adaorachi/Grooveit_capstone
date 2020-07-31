@@ -59,9 +59,9 @@ const shuffle = arr => {
 
 const shortenWord = (string, num) => {
   let str = string;
-  // if (string.length > num) {
-  //   str = `${string.slice(0, num)}...`;
-  // }
+  if (string.length > num) {
+    str = `${string.slice(0, num)}...`;
+  }
   return str;
 };
 

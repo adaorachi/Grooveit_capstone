@@ -53,7 +53,7 @@ class ArtistPlaylist extends Component {
   fetchData(artistId) {
     const { limit } = this.state;
     try {
-      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const cors = '';
       const artistInfo = () => axios.get(`${cors}https://api.deezer.com/artist/${artistId}`);
       const artistPlayList = () => axios.get(`${cors}https://api.deezer.com/artist/${artistId}/top?${limit}`);
       const artistAlbums = () => axios.get(`${cors}https://api.deezer.com/artist/${artistId}/albums`);

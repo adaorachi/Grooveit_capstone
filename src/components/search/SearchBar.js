@@ -14,7 +14,7 @@ class SearchBar extends Component {
 
   getSearch(e) {
     try {
-      const cors = 'https://cors-anywhere.herokuapp.com/';
+      const cors = '';
       const response = axios.get(`${cors}https://api.deezer.com/search/track?q=${e.target.value}`);
       response.then(res1 => {
         const res = res1.data.data;
