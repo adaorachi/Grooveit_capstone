@@ -5,7 +5,11 @@ const NavbarLinks = props => {
   const { link } = props;
   return (
     <li className="nav-item">
-      <a href={`#${link.toLowerCase().split(' ').join('-')}`} className="nav-link text-primary">
+      <a
+        href={`#${link.toLowerCase().split(' ').join('-')}`}
+        className="nav-link text-primary"
+        data-testid={`${link.split(' ').join('-')}-link`}
+      >
         {link}
       </a>
     </li>

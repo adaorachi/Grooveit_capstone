@@ -37,6 +37,7 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 
   In this project, the complete feature of the app renders the following:
 
+  Used the [Deezer API](https://developers.deezer.com/api) for the music data collection.
   A user can view all list of genres of music and artists.
   A user can filter of the artist based on the music genres.
   A user can view a single artist.
@@ -46,7 +47,7 @@ A music app built with the React and Redux frameworks. It shows music artist acc
   A user can listen to audio music. A play, pause and replay features were also implemented.
   A user can search for music tracks.
   A user can toggle between dark and light mode.
-- A user can navigate throught the pages of the site:
+  A user can navigate throught the pages of the site:
 
 * Home Page - Genre/Category page.
 * Artist (Artist tracks) Page
@@ -105,6 +106,8 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 <!-- INSTALLATION -->
 
 ## Installation of This Repository
+To allows localhost to send cross-domain requests to the Deezer API, you can override Request Origin and CORS headers by installing this extension on your browser [Moesif Orign & CORS Changer](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc)
+
 
 Clone the Repository,
 

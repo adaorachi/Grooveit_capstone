@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { render, cleanup } from '@testing-library/react';
 import rootReducer from '../reducers/index';
 import App from '../components/pages/App';
-import Home from '../components/pages/home_page/Home';
+import Navbar from '../components/layouts/nav_bar/Navbar';
 
 afterEach(cleanup);
 const div = document.createElement('div');
@@ -21,17 +21,17 @@ test('landing page rendering or navigation', () => {
     </MemoryRouter>, div,
   );
 
-  expect(getByTestId('check-app-route').textContent).toBe('Categories');
+  expect(getByTestId('Discover-link').textContent).toBe('Discover');
 });
 
 test('landing page rendering or navigation', () => {
   const { getByTestId } = reduxRendering(
     <MemoryRouter>
-      <Home />
+      <Navbar />
     </MemoryRouter>, div,
   );
 
-  expect(getByTestId('check-home-route').textContent).toBe('Categories');
+  expect(getByTestId('Recommended-link').textContent).toBe('Recommended');
 });
 
 export default reduxRendering;
