@@ -53,10 +53,10 @@ class ArtistPlaylist extends Component {
   fetchData(artistId) {
     const { limit } = this.state;
     try {
-      const artistInfo = () => axios.get(`/artist/${artistId}`);
-      const artistPlayList = () => axios.get(`/artist/${artistId}/top?${limit}`);
-      const artistAlbums = () => axios.get(`/artist/${artistId}/albums`);
-      const artistRelated = () => axios.get(`/artist/${artistId}/related`);
+      const artistInfo = () => axios.get(`https://api.deezer.com/artist/${artistId}`);
+      const artistPlayList = () => axios.get(`https://api.deezer.com/artist/${artistId}/top?${limit}`);
+      const artistAlbums = () => axios.get(`https://api.deezer.com/artist/${artistId}/albums`);
+      const artistRelated = () => axios.get(`https://api.deezer.com/artist/${artistId}/related`);
 
       Promise.all([artistInfo(), artistPlayList(), artistAlbums(), artistRelated()])
         .then(results => {

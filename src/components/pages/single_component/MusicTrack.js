@@ -39,7 +39,7 @@ class MusicTrack extends Component {
 
   fetchData(trackId) {
     try {
-      const artistInfo = axios.get(`/track/${trackId}`);
+      const artistInfo = axios.get(`https://api.deezer.com/track/${trackId}`);
       artistInfo.then(result => {
         this.setState({
           track: result.data,
