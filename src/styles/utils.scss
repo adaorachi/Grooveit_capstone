@@ -31,11 +31,11 @@ $secondary_font_sub: 'Niconne', cursive;
 
 [data-theme="dark"] {
   --primary_bgcolor2: #eceef3;
-  --primary-bgcolor: #aaa;
+  --primary-bgcolor: #fff;
   --primary_color: #131722;
   --primary_color2: #ed215d;
   --primary-bgcolor-opacity: #aaaaaa30;
-  --header-home-image: linear-gradient(0deg, #aaaaaa30, #aaaaaa30), url('./../images/whitegirl33.png');
+  --header-home-image: linear-gradient(0deg, #ffffffab, #ffffffa8), url('./../images/whitegirl33.png');
   --header-image-after: url('./../images/wavy2.svg') center no-repeat;
   --navbar-row-bg: linear-gradient(45deg, #ffffff52, #ffffff24);
   --small-card-bg: #dfe2ec;

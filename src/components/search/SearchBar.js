@@ -21,7 +21,7 @@ class SearchBar extends Component {
 
   getSearch(e) {
     try {
-      const response = axios.get(`https://api.deezer.com/search/track?q=${e.target.value}`);
+      const response = axios.get(`/search/track?q=${e.target.value}`);
       response.then(res1 => {
         const res = res1.data.data;
         if (res) {

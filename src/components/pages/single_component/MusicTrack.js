@@ -39,7 +39,7 @@ class MusicTrack extends Component {
 
   fetchData(trackId) {
     try {
-      const artistInfo = axios.get(`https://api.deezer.com/track/${trackId}`);
+      const artistInfo = axios.get(`/track/${trackId}`);
       artistInfo.then(result => {
         this.setState({
           track: result.data,
@@ -120,7 +120,7 @@ class MusicTrack extends Component {
 }
 
 MusicTrack.propTypes = {
-  match: PropTypes.func.isRequired,
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default MusicTrack;

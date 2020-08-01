@@ -6,7 +6,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NavbarLink from './NavbarLinks';
 import NavbarDrawer from './NavbarDrawer';
 import SearchBar from '../../search/SearchBar';
-import { closeDrawer } from '../../../utils/Helper';
+import { closeDrawer, toggleDark } from '../../../utils/Helper';
 import logo from '../../../images/menu.png';
 import '../../../styles/navbar.scss';
 import '../../../styles/nav_drawer.scss';
@@ -21,6 +21,10 @@ const Navbar = () => (
           {['Discover', 'New Releases', 'Recommended', 'Charts'].map(text => (
             <NavbarLink link={text} key={text} />
           ))}
+          <label className="switch-toggle-mode switch">
+            <input type="checkbox" onChange={() => toggleDark()} id="toggle-dark" className="theme-switch" />
+            <span className="slider round" />
+          </label>
         </ul>
       </div>
       <div className="search-area">

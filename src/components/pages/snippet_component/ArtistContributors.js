@@ -47,7 +47,7 @@ const ArtistContributors = props => {
 };
 
 ArtistContributors.propTypes = {
-  contributor: PropTypes.func.isRequired,
+  contributor: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default ArtistContributors;
