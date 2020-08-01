@@ -57,11 +57,11 @@ const shuffle = arr => {
   return arr;
 };
 
-const shortenWord = string => {
-  const str = string;
-  // if (string.length > num) {
-  //   str = `${string.slice(0, num)}...`;
-  // }
+const shortenWord = (string, num) => {
+  let str = string;
+  if (string.length > num) {
+    str = `${string.slice(0, num)}...`;
+  }
   return str;
 };
 

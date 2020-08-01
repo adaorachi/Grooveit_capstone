@@ -96,7 +96,7 @@ const TopCharts = props => {
     });
 
     mapCharts = allVals.map((aa, index) => {
-      if (aa.length > 0 && allVals[index] !== 'podcasts') {
+      if (aa.length > 0 && allKeys[index] !== 'podcasts') {
         return (
           <div key={allKeys[index]} className="chart-cat">
             <div className="heading">
