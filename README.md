@@ -94,8 +94,7 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 <!-- LIVE PREVIEW -->
 
 ## LIVE PREVIEW
-* Here is a link to the live version of the app - [Groovy-IT Music App](https://groovy-it.herokuapp.com/
-)
+* Here is a link to the live version of the app - [Groovy-IT Music App](https://groove-it.netlify.app/)
 <!-- REQUIRED INSTALLATION -->
 
 ## REQUIRED INSTALLATIONS
