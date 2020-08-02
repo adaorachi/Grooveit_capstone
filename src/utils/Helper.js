@@ -150,18 +150,6 @@ const toggleDark = () => {
   });
 };
 
-const loaderEffect = () => {
-  let i = 0;
-  const txt = 'Loading...';
-  const speed = 50;
-
-  if (i < txt.length) {
-    document.getElementById('loader').innerHTML += txt.charAt(i);
-    i += 1;
-    setTimeout(loaderEffect, speed);
-  }
-};
-
 export {
   closeDrawer,
   clickGenre,
@@ -174,5 +162,4 @@ export {
   musicPlayer,
   navScroll,
   toggleDark,
-  loaderEffect,
 };

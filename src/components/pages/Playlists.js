@@ -77,7 +77,7 @@ const Playlists = props => {
       ));
 
       return (
-        <div className="album-page-content" key={playlist.id}>
+        <div className="album-page-content main-content" key={playlist.id}>
           <div className="album-header">
             <div className="image-cover">
               <img className="album-img" src={playlist.picture_big} alt={playlist.title} width="160" />

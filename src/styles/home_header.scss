@@ -22,6 +22,7 @@
     background: var(--header-home-image);
     background-repeat: no-repeat;
     background-position: 50% 0%;
+    background-size: contain;
     height: 100%;
     width: 100%;
     transform: scaleX(-1);
