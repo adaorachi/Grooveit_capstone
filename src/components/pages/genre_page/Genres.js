@@ -47,7 +47,7 @@ const mapStateToProps = state => ({
 });
 
 Genres.propTypes = {
-  musicGenre: PropTypes.func.isRequired,
+  musicGenre: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default connect(mapStateToProps, null)(Genres);

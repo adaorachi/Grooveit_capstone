@@ -14,7 +14,7 @@ $secondary_font_sub: 'Niconne', cursive;
   --primary-bgcolor: #131722;
   --primary_color: #fff;
   --primary-bgcolor-opacity: #131722bf;
-  --header-home-image: linear-gradient(0deg, #131722bf, #131722bf), url('./../images/blackgirl33.png');
+  --header-home-image: linear-gradient(0deg, #131722bf, #131722bf), url('./../images/blackgirl1.png');
   --header-image-after: url('./../images/wavy1.svg') center no-repeat;
   --navbar-row-bg: linear-gradient(45deg, #131722b0, #131722bf);
   --small-card-bg: #0c0f1b;
@@ -29,13 +29,13 @@ $secondary_font_sub: 'Niconne', cursive;
   --heading-color: #292922;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --primary_bgcolor2: #eceef3;
   --primary-bgcolor: #fff;
   --primary_color: #131722;
   --primary_color2: #ed215d;
   --primary-bgcolor-opacity: #aaaaaa30;
-  --header-home-image: linear-gradient(0deg, #ffffffab, #ffffffa8), url('./../images/whitegirl33.png');
+  --header-home-image: linear-gradient(0deg, #ffffff7c, #ffffff7c), url('./../images/blackgirl1.png');
   --header-image-after: url('./../images/wavy2.svg') center no-repeat;
   --navbar-row-bg: linear-gradient(45deg, #ffffff52, #ffffff24);
   --small-card-bg: #dfe2ec;

@@ -143,21 +143,23 @@ const toggleDark = () => {
 
   toggleSwitch.addEventListener('change', e => {
     if (e.target.checked) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
       document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   });
+};
 
-  // function switchTheme(e) {
-  //   if (e.target.checked) {
-  //     document.documentElement.setAttribute('data-theme', 'dark');
-  //   } else {
-  //     document.documentElement.setAttribute('data-theme', 'light');
-  //   }
-  // }
+const loaderEffect = () => {
+  let i = 0;
+  const txt = 'Loading...';
+  const speed = 50;
 
-  // toggleSwitch.addEventListener('change', switchTheme, false);
+  if (i < txt.length) {
+    document.getElementById('loader').innerHTML += txt.charAt(i);
+    i += 1;
+    setTimeout(loaderEffect, speed);
+  }
 };
 
 export {
@@ -172,4 +174,5 @@ export {
   musicPlayer,
   navScroll,
   toggleDark,
+  loaderEffect,
 };

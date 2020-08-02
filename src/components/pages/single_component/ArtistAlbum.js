@@ -100,7 +100,7 @@ class ArtistAlbum extends Component {
         };
 
         albumContent = (
-          <div className="album-page-content">
+          <div className="album-page-content main-content">
             <div className="album-header">
               <div className="image-cover">
                 <img className="album-img" src={info.cover_big} alt={info.title} width="160" />

@@ -94,7 +94,7 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 <!-- LIVE PREVIEW -->
 
 ## LIVE PREVIEW
-* Here is a link to the live version of the app - [Groovy-IT Music App](https://groove-it.netlify.app/)
+* Here is a link to the live version of the app - [Groove-IT Music App](https://groove-it.netlify.app/)
 <!-- REQUIRED INSTALLATION -->
 
 ## REQUIRED INSTALLATIONS
@@ -105,8 +105,6 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 <!-- INSTALLATION -->
 
 ## Installation of This Repository
-To allows localhost to send cross-domain requests to the Deezer API, you can override Request Origin and CORS headers by installing this extension on your browser [Moesif Orign & CORS Changer](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc)
-
 
 Clone the Repository,
 
@@ -118,6 +116,12 @@ Go to the downloaded folder
 
 ```Shell
 your@pc:~$ cd React_capstone
+```
+
+Check out to the feature branch if the project is still in the development phase
+
+```Shell
+your@pc:~$ git checkout <feature-branch>
 ```
 
 Install all packages

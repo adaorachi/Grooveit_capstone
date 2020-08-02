@@ -162,7 +162,7 @@ const mapStateToProps = state => ({
 });
 
 Playlists.propTypes = {
-  musicPlayList: PropTypes.func.isRequired,
+  musicPlayList: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default connect(mapStateToProps, null)(Playlists);

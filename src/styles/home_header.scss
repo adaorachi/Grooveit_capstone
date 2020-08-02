@@ -1,14 +1,10 @@
 @import 'utils.scss';
 
 .heading h3 {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .header-content {
-  background: var(--header-home-image);
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  height: 580px;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -16,8 +12,22 @@
   padding: 3rem;
   box-sizing: border-box;
   color: #fff;
+  height: 580px;
 
   &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--header-home-image);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(-1);
+  }
+
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -26,6 +36,10 @@
     height: 17rem;
     background: var(--header-image-after);
     background-size: cover;
+  }
+
+  & > * {
+    position: relative;
   }
 
   svg {
@@ -37,17 +51,20 @@
 
     h1 {
       font-size: 4rem;
-      letter-spacing: 0.3rem;
-      font-family: $secondary_font_sub;
       margin-bottom: 2rem;
       color: var(--primary_color2);
     }
+
+    h3 {
+      font-size: 1.4rem !important;
+    }
   }
 
-  .groovy-music p:nth-child(1) {
-    padding: 1rem 0 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
+  .groovy-music {
+    .groovy-music-title {
+      padding: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
   }
 
   .groovy-image {

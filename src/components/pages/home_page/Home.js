@@ -76,9 +76,11 @@ class Home extends Component {
                   </h3>
                 </div>
                 <div className="groovy-music">
-                  <Link to={`/tracks/${topFirst.id}`}>
-                    <p id={`title-${topFirst.id}`}>{topFirst.title}</p>
-                  </Link>
+                  <div className="groovy-music-title">
+                    <Link to={`/tracks/${topFirst.id}`} id={`title-${topFirst.id}`}>
+                      {topFirst.title}
+                    </Link>
+                  </div>
                   <div className="flex-props">
                     <img id={`image-${topFirst.id}`} src={topFirst.album.cover_medium} className="groovy-image" alt={topFirst.album.title} width="40" />
                     <Link to={`/artists/${topFirst.artist.id}`}>
