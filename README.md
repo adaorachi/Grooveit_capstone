@@ -11,9 +11,9 @@
   </a>
 </p>
 
-### Groovy-It Music App
+# Groovy-It Music App
 
-A music app built with the React and Redux frameworks. It shows music artist accoring to the genres and each artist page contains a list of music tracks and album for that artist. The project name for this project is [Catalogue of Dog Clothes](https://www.notion.so/Catalogue-of-Dog-Clothes-8bf1512b8ab34fa28848beb8ab698a32) from the project requirement.
+A music app built with the React and Redux frameworks. It shows music artists according to the genres and each artist page contains a list of music tracks and albums for that artist. The project name for this project is [Catalogue of Dog Clothes](https://www.notion.so/Catalogue-of-Dog-Clothes-8bf1512b8ab34fa28848beb8ab698a32) from the project requirement.
 
 ## Table of Contents
 
@@ -33,21 +33,21 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 
 ## About Project
 
-  This project is a Music App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then use the Redux store using Redux actions, reducers and methods.
+  This project is a Music App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then uses the Redux store using Redux actions, reducers, and methods.
 
   In this project, the complete feature of the app renders the following:
 
   Used the [Deezer API](https://developers.deezer.com/api) for the music data collection.
   A user can view all list of genres of music and artists.
-  A user can filter of the artist based on the music genres.
+  A user can filter the artist based on the music genres.
   A user can view a single artist.
   A user can view a single artist track.
   A user can view a single artist album tracks.
-  A user can view new released tracks, recommended tracks and top chart information.
-  A user can listen to audio music. A play, pause and replay features were also implemented.
+  A user can view newly released tracks, recommended tracks, and top chart information.
+  A user can listen to audio music. A play, pause, and replay features were also implemented.
   A user can search for music tracks.
   A user can toggle between dark and light mode.
-  A user can navigate throught the pages of the site:
+  A user can navigate through the pages of the site:
 
 * Home Page - Genre/Category page.
 * Artist (Artist tracks) Page
@@ -63,18 +63,18 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 
 <br>
 
-* You can watch a live demostration of the project using this link - https://www.loom.com/share/13ccdf43aa77463892726c600d6ba21a
+* You can watch a live demonstration of the project using this link - https://www.loom.com/share/13ccdf43aa77463892726c600d6ba21a
 
 <!-- BUILT WITH -->
 
-# Built With
+## Built With
 
-- VsCode
+- vscode
 - Git
 
 <!-- TECHNOLOGIES EMPLOYED -->
 
-# Technologies Employed
+## Technologies Employed
 
 - React Thunk
 - Redux Store
@@ -93,18 +93,18 @@ A music app built with the React and Redux frameworks. It shows music artist acc
 
 <!-- LIVE PREVIEW -->
 
-## LIVE PREVIEW
+## Live Preview
 * Here is a link to the live version of the app - [Groove-IT Music App](https://groove-it.netlify.app/)
 <!-- REQUIRED INSTALLATION -->
 
-## REQUIRED INSTALLATIONS
+## Required Installations
 
 - node
 - git
 
 <!-- INSTALLATION -->
 
-## Installation of This Repository
+## Installation of App
 
 Clone the Repository,
 
@@ -136,7 +136,7 @@ Start the server
 your@pc:~$ npm start
 ```
 
-The app will open on your local host port 3000.
+The app will open on your localhost port 3000.
 
 <!-- run tests -->
 
@@ -158,7 +158,7 @@ your@pc:~$ npm test src/tests/<testfile>
 
 ## Future Features
 
-- Work on front-end reponsiveness.
+- Work on front-end responsiveness.
 
 ## Learn More
 
@@ -166,7 +166,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-# Author
+## Author
 
 **MaryAnn Chukwuka**
 
@@ -175,7 +175,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Linkedin: [MaryAnn Chukwuka](https://https://www.linkedin.com/in/adaorachi/)
   <br />
 
-# License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
