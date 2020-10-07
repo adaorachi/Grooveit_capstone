@@ -1,0 +1,52 @@
+@import 'utils.scss';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $primary_bgcolor;
+  height: 4rem;
+  border-top: 1px solid #0c0e16;
+  margin-left: 70px;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .player-info,
+  .player-bar,
+  .player-repeat,
+  .player-play-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .player-repeat {
+    flex: 5;
+  }
+
+  .player-play-buttons,
+  .player-bar,
+  .player-info {
+    flex: 2;
+
+    .player-img {
+      border-radius: 50%;
+    }
+  }
+
+  .music-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .player-progress {
+    width: 25rem;
+    height: 3px;
+    display: block;
+    background: #fff;
+  }
+}

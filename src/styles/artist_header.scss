@@ -1,0 +1,43 @@
+.artist-header {
+  height: 270px;
+  position: relative;
+
+  .artist-bg {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: 50% 15%;
+    background-size: cover;
+    opacity: 0.2;
+    filter: blur(8px);
+  }
+
+  .artist-info {
+    position: absolute;
+    bottom: -5rem;
+    display: flex;
+    align-items: center;
+
+    .artist-img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+    }
+
+    .sub-info {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .artist-name {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-weight: bolder;
+    }
+  }
+}

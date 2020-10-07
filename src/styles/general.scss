@@ -1,0 +1,30 @@
+.wrapper-container {
+  min-height: 100vh;
+  font-family: $primary_font;
+  color: var(--primary_color);
+}
+
+.main-container {
+  padding: 0 1rem 1rem;
+  // padding: 1rem;
+  margin-left: 70px;
+
+  .main-content {
+    padding: 8rem 0;
+  }
+
+  .home-content {
+    height: 100%;
+    position: relative;
+    margin-bottom: 8rem;
+
+    .section {
+      margin-bottom: 5rem;
+    }
+
+    .body-content {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}

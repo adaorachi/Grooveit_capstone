@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Teko&family=Montserrat&family=Niconne&display=swap');
+
+$primary_bgcolor: #131722;
+$primary_bgcolor2: #0c0f1b;
+$primary_bgcolor_tint: linear-gradient(45deg, #131722b0, #131722bf);
+$secondary_bgcolor: #ed215d;
+$primary_color: #fff;
+$primary_font: 'Cormorant Infant', serif;
+$secondary_font: 'Teko', sans-serif;
+$secondary_font_sub: 'Niconne', cursive;
+
+:root {
+  --primary_bgcolor2: #0a0d17;
+  --primary-bgcolor: #131722;
+  --primary_color: #fff;
+  --primary-bgcolor-opacity: #131722bf;
+  --header-home-image: linear-gradient(0deg, #131722bf, #131722bf), url('./../images/blackgirl1.png');
+  --header-image-after: url('./../images/wavy1.svg') center no-repeat;
+  --navbar-row-bg: linear-gradient(45deg, #131722b0, #131722bf);
+  --small-card-bg: #0c0f1b;
+  --small-card-color: #fff;
+  --card-bg: #0c0f17;
+  --card-border: #2f2d2d;
+  --filter-border: #4d4f56;
+  --slider-button-shadow: #080808;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --nav-bgcolor: #131722;
+  --heading-color: #292922;
+}
+
+[data-theme="light"] {
+  --primary_bgcolor2: #eceef3;
+  --primary-bgcolor: #fff;
+  --primary_color: #131722;
+  --primary_color2: #ed215d;
+  --primary-bgcolor-opacity: #aaaaaa30;
+  --header-home-image: linear-gradient(0deg, #ffffff7c, #ffffff7c), url('./../images/blackgirl1.png');
+  --header-image-after: url('./../images/wavy2.svg') center no-repeat;
+  --navbar-row-bg: linear-gradient(45deg, #ffffff52, #ffffff24);
+  --small-card-bg: #dfe2ec;
+  --small-card-color: #131722;
+  --card-bg: #808084;
+  --card-border: #9a9292;
+  --filter-border: #fff;
+  --slider-button-shadow: #7d7373;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --nav-bgcolor: #fff;
+  --heading-color: #818cab;
+}

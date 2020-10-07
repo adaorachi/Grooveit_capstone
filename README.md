@@ -1,41 +1,164 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-## Available Scripts
+<p align="center">
+  <a href="https://www.ruby-lang.org/en/">
+    <img src="https://img.shields.io/badge/React-v16.3.1-brightgreen.svg" alt="ruby version">
+    <img src="https://img.shields.io/badge/Redux-v4.0.5-brightgreen.svg" alt="ruby version">
+  </a>
+</p>
 
-In the project directory, you can run:
+### Groovy-It Music App
 
-### `npm start`
+A music app built with the React and Redux frameworks. It shows music artist accoring to the genres and each artist page contains a list of music tracks and album for that artist. The project name for this project is [Catalogue of Dog Clothes](https://www.notion.so/Catalogue-of-Dog-Clothes-8bf1512b8ab34fa28848beb8ab698a32) from the project requirement.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [About Project](#about-project)
+- [Screen Shots And Presentation](#screen-shots)
+- [Built With](#built-with)
+- [Technologies Employed](#technologies-employed)
+- [Live Preview](#live-preview)
+- [Required Installations](#required-installations)
+- [App Installation](#instalation)
+- [Future Features](#future-features)
+- [License](#license)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
-### `npm test`
+<!-- User features -->
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About Project
 
-### `npm run build`
+  This project is a Music App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then use the Redux store using Redux actions, reducers and methods.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  In this project, the complete feature of the app renders the following:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  Used the [Deezer API](https://developers.deezer.com/api) for the music data collection.
+  A user can view all list of genres of music and artists.
+  A user can filter of the artist based on the music genres.
+  A user can view a single artist.
+  A user can view a single artist track.
+  A user can view a single artist album tracks.
+  A user can view new released tracks, recommended tracks and top chart information.
+  A user can listen to audio music. A play, pause and replay features were also implemented.
+  A user can search for music tracks.
+  A user can toggle between dark and light mode.
+  A user can navigate throught the pages of the site:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Home Page - Genre/Category page.
+* Artist (Artist tracks) Page
+* Album Page
+* Genre Page
 
-### `npm run eject`
+<!-- Screen shots -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Screen Shots And Presentation
+<img src="src/images/screenshots/Screenshot1.png"/>
+<img src="src/images/screenshots/Screenshot2.png"/>
+<img src="src/images/screenshots/Screenshot3.png"/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* You can watch a live demostration of the project using this link - https://www.loom.com/share/13ccdf43aa77463892726c600d6ba21a
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- BUILT WITH -->
+
+# Built With
+
+- VsCode
+- Git
+
+<!-- TECHNOLOGIES EMPLOYED -->
+
+# Technologies Employed
+
+- React Thunk
+- Redux Store
+- React Routers
+- Jest auto watch
+- CSS Modules
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- Redux
+- npm
+- CSS
+- ES6
+- React-thunk
+
+<!-- LIVE PREVIEW -->
+
+## LIVE PREVIEW
+* Here is a link to the live version of the app - [Groove-IT Music App](https://groove-it.netlify.app/)
+<!-- REQUIRED INSTALLATION -->
+
+## REQUIRED INSTALLATIONS
+
+- node
+- git
+
+<!-- INSTALLATION -->
+
+## Installation of This Repository
+
+Clone the Repository,
+
+```Shell
+your@pc:~$ git clone https://github.com/adaorachi/React_capstone.git
+```
+
+Go to the downloaded folder
+
+```Shell
+your@pc:~$ cd React_capstone
+```
+
+Check out to the feature branch if the project is still in the development phase
+
+```Shell
+your@pc:~$ git checkout <feature-branch>
+```
+
+Install all packages
+
+```Shell
+your@pc:~$ npm install
+```
+
+Start the server
+
+```Shell
+your@pc:~$ npm start
+```
+
+The app will open on your local host port 3000.
+
+<!-- run tests -->
+
+## Run tests
+
+Run all tests
+
+```Shell
+your@pc:~$ npm test
+```
+
+Run specific tests
+
+```Shell
+your@pc:~$ npm test src/tests/<testfile>
+```
+
+<!-- Future features -->
+
+## Future Features
+
+- Work on front-end reponsiveness.
 
 ## Learn More
 
@@ -43,26 +166,36 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Author
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**MaryAnn Chukwuka**
 
-### Analyzing the Bundle Size
+- Github: [@adaorachi](https://github.com/adaorachi)
+- Twitter: [@Chukwuka_maryann](https://twitter.com/adaorachi)
+- Linkedin: [MaryAnn Chukwuka](https://https://www.linkedin.com/in/adaorachi/)
+  <br />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<!-- ACKNOWLEDGEMENTS -->
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/)
 
-### Deployment
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[contributors-shield]: https://img.shields.io/github/contributors/adaorachi/React_capstone.svg?style=flat-square
+[contributors-url]: https://github.com/adaorachi/React_capstone/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/adaorachi/React_capstone
+[forks-url]: https://github.com/adaorachi/React_capstone/network/members
+[stars-shield]: https://img.shields.io/github/stars/adaorachi/React_capstone
+[stars-url]: https://github.com/adaorachi/React_capstone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/adaorachi/React_capstone
+[issues-url]: https://github.com/adaorachi/React_capstone/issues
+[license-shield]: https://img.shields.io/github/license/adaorachi/React_capstone
+[license-url]: https://github.com/adaorachi/React_capstone/blob/master/LICENSE.txt
